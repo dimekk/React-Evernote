@@ -18,4 +18,4 @@ class SiderBarComponent extends React.Component {
     }
 }
 
-export default withStyles(styles)(SidebarItemComponent);
+export default withStyles(styles)(SiderBarComponent);
