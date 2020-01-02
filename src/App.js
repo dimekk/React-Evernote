@@ -24,7 +24,13 @@ class App extends React.Component {
     firebase
       .firestore()
       .collection('notes')
-      .onSnapshot();
+      .onSnapshot(serverUpdate => {
+        const notes = serverUpdate.docs.map(_doc => {
+          const data = _doc.data();
+          data['id'] = _doc.id;
+          return data;
+        });
+      });
   }
 }
 
