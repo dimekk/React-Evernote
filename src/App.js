@@ -1,6 +1,8 @@
 import React from 'react';
 import './index.css';
 
+const firebase = require('firebase');
+
 class App extends React.Component {
 
   constructor() {
@@ -16,6 +18,13 @@ class App extends React.Component {
     return(
       <div>hello</div>
     );
+  }
+
+  componentDidMount = () => {
+    firebase
+      .firestore()
+      .collection('notes')
+      .onSnapshot();
   }
 }
 
