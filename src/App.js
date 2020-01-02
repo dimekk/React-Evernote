@@ -6,9 +6,9 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      selectedNoteIndex: null;
-      selectedNote: null;
-      notes: null;
+      selectedNoteIndex: null,
+      selectedNote: null,
+      notes: null
     }
   }
 
